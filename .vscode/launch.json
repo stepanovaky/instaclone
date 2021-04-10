@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        
+        {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "pwa-chrome",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "instaclone:src/pages/login.Login (nodejs14.x)",
+            "invokeTarget": {
+                "target": "code",
+                "projectRoot": "${workspaceFolder}/",
+                "lambdaHandler": "src/pages/login.Login"
+            },
+            "lambda": {
+                "runtime": "nodejs14.x",
+                "payload": {},
+                "environmentVariables": {}
+            }
+        }
+    ]
+}
